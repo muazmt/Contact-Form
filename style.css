@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:wght@100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Lexend+Deca:wght@100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Karla", sans-serif;
+}
+
+:root {
+  --Light-Green: hsl(148, 38%, 91%);
+  --Green: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 56%);
+  --White: hsl(0, 0%, 100%);
+  --Medium-Grey: hsl(186, 15%, 59%);
+  --Dark-Grey: hsl(187, 24%, 22%);
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: hsl(148, 38%, 91%);
+}
+.con {
+  width: 355px;
+  background-color: hsl(0, 0%, 100%);
+  padding: 32px 24px 20px 27px;
+  position: relative;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+h1 {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+p {
+  font-size: 16px;
+}
+.input1,
+.radio-inputs,
+button {
+  width: 100%;
+  height: 50px;
+  border: 1px solid hsl(186, 15%, 59%);
+  border-radius: 7px;
+  padding: 0 15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.textarea {
+  resize: none;
+  height: 238px;
+}
+
+.radio-inputs {
+  padding-left: 25px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+button {
+  background-color: var(--Green);
+  color: var(--White);
+  font-weight: 700;
+  padding: 7px;
+}
+button:hover {
+  background-color: var(--Dark-Grey);
+}
+
+label,
+textarea,
+h1 {
+  color: hsl(187, 24%, 22%);
+}
+label span {
+  color: hsl(169, 82%, 27%);
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid hsl(169, 82%, 27%);
+  border: 1px solid hsl(169, 82%, 27%);
+  border-bottom: 2px solid var(--Red);
+}
+
+.checkbox {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+  accent-color: var(--Green);
+  outline: none;
+}
+
+.errorsDisplay {
+  color: var(--Red);
+  font-size: 15px;
+  font-weight: 500;
+  margin: 7px 0;
+}
+
+#success {
+  background-color: var(--Dark-Grey);
+  color: var(--Light-Green);
+  padding: 20px;
+  border-radius: 7px;
+  width: 61%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-89px);
+  transition: 0.5s;
+  margin-left: 145px;
+  display: none;
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .con {
+    width: 745px;
+    padding: 40px;
+  }
+  .formflex {
+    display: flex;
+    gap: 15px;
+  }
+
+  .form-first,
+  .form-last {
+    flex-grow: 1;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+  .radio-option {
+    display: flex;
+    width: 99.7%;
+    gap: 15px;
+  }
+  .checkbox {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
